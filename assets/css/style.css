@@ -3,6 +3,22 @@ html {
     min-height: 100%;
 }
 
+.wrapper {
+    background-color: blueviolet;
+    width: 1000px;
+    height: 1000px;
+}
+
+h2 {
+    background-color:rgb(22, 155, 56);
+    color:white;
+}
+
+.instruction-text {
+    background-color:rgb(22, 155, 56);
+    color:white;
+    font-size:25px;
+}
 
 body{
     background-image:url("../images/background.jpeg");
@@ -10,9 +26,63 @@ body{
     
 }
 
-.main-title {
+.header {
     color: white;
     background-color: black;
     margin-left:300px;
     margin-right:350px;
+}
+
+
+#instructions {
+    float:left;
+    height: 400px;
+    width: 500px;
+}
+
+#goal-number {
+    float:left;
+    background-color: aquamarine;
+    color:rgb(218, 24, 18);
+    width: 200px;
+    height: 200px;
+}
+
+#wins-loses {
+    float:left;
+}
+
+.record {
+    float:left;
+    width:100px;
+    height:200px;
+    color:rgb(241, 245, 22);
+    background-color:red;
+}
+
+#gem1 {
+    float:left;
+    position: relative;
+    margin-top: 0px;
+}
+
+#gem2 {
+    
+    float:left;
+}
+
+#gem3 {
+    float:left;
+}
+
+.gem-container {
+    height: 200px;
+    width: 800px;
+    
+}
+
+#total-score {
+    background-color: rgb(243, 147, 21);
+    color:white;
+    height: 100px;
 }

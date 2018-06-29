@@ -6,33 +6,71 @@
     <title>Crystal Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="main.js"></script>
+    <script src="assets/javascript/game.js"></script>
 
     
 
 </head>
 <body>
-    <div class="main-title">
-        <h1>Welcome to Crystal Collector!</h1>
-    </div>
+    <div =class="wrapper">
+        <div class="header">
+            <h1>Welcome to Crystal Collector!</h1>
+        </div>
 
-    <div>
-        <h3>Instructions</h3>
-        <p>You will be given a random number at the beginning of the game.
+        
+            <div class="main-content">
+
+                <div id="instructions">
+                    <h2>Instructions</h2>
+                    <p class="instruction-text">You will be given a random number at the beginning of the game.   
+                    <br>
+                    <br>
+                    There are four crystals to choose from. By clicking on a crystal you will add a specific number of points to your score.
+                    <br>
+                    <br>
+                    You can win the game by matching your total score to a random number. But you will lose the game if your score surpasses the random number. So choose wisely!
+                    <br>
+                    <br>
+                    The value of each crystal will be hidden until you click on it.
+                    <br>
+                    <br>
+                    Each time the game starts, the game will change the value of each crystal.</p>
+                    
+                </div>
+
+                <div id="goal-number">Goal Number</div>
+
+                <div id="wins-loses">
+                    <p class="record">Wins: <span id="wins">0</span></p>
+                    <p class="record">Losses: <span id="losses">0</span></p>
+                </div>
+
             
-            There are four crystals to choose from. By clicking on a crystal you will add a specific number of points to your score.
+                <div class="gem-containter">
+                    <div id="gem1">
+                        <button><img src="assets/images/gem1.jpeg" height="100px" width="100px"></button> 
+                    </div>
 
-            
-        </p>
-    </div>
+                    <div id="gem2">
+                        <button><img src="assets/images/gem2.jpeg" height="100px" width="100px"></button>
+                    </div>
+
+                    <div id="gem3">
+                        <button><img src="assets/images/gem3.jpeg" height="100px" width="100px"></button>
+                    </div>
+
+                    <div id="gem4">
+                        <button><img src="assets/images/gem4.jpeg" height="100px" width="100px"></button>
+                    </div>
+                </div>
+
+                <div id="total-score">
+                    <p class="score">Score: <span id="game-score">0</span></p>
+                </div>
 
 
 
-
-
-
-
-
+            </div>
 
     </div>
     

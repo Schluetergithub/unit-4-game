@@ -12,6 +12,7 @@ html {
 h2 {
     background-color:rgb(22, 155, 56);
     color:white;
+    margin-top:0;
 }
 
 .instruction-text {
@@ -58,12 +59,14 @@ body{
     height:200px;
     color:rgb(241, 245, 22);
     background-color:red;
+    margin-top:0;
 }
 
 #gem1 {
     float:left;
     position: relative;
-    margin-top: 0px;
+    
+    /* margin: 5px 5px; */
 }
 
 #gem2 {
@@ -85,4 +88,5 @@ body{
     background-color: rgb(243, 147, 21);
     color:white;
     height: 100px;
+    
 }

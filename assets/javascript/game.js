@@ -13,9 +13,11 @@
 // maybe display:none for the gem values.
 
 
-
+$(document).ready(function() {
 
 var randomNumber = Math.floor(Math.random() * 20);
+
+var gem_value = Math.floor(Math.random() * 20);
 
 var total_score = [];
 
@@ -29,7 +31,55 @@ var reset = function (){
     document.getElementById("Score").innerHTML = total_score;
 }
 
-document.onclick = function(event){
+// onclick function for gems to be assigned random value
+$("#gem1").on("click", function() {
+
+    gem_value = Math.floor(Math.random() * 20)
+}
+
+$("#gem2").on("click", function() {
+
+    gem_value = Math.floor(Math.random() * 20)
+}
+
+$("#gem3").on("click", function() {
+
+    gem_value = Math.floor(Math.random() * 20)
+}
+
+$("#gem4").on("click", function() {
+
+    gem_value = Math.floor(Math.random() * 20)
+}
+
+
+
+
+
+
+
+
+
+
+
+// onclick function for gem buttons to push to scoreboard
+$(".to_scoreboard").on("click", function() {
+
+    $("#gem_value").prepend("<br><hr>" + to_scoreboard);
+
+
 
 
 }
+
+
+// if - win scenario
+if (total_score === randomNumber) {
+    wins++
+    alert("Congratulation! You collected the EXACT value! Let's play again!");
+}
+
+
+
+
+});

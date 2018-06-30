@@ -15,4 +15,21 @@
 
 
 
-var randomNumber = Math.floor(Math.random) * 20
+var randomNumber = Math.floor(Math.random() * 20);
+
+var total_score = [];
+
+var wins = 0;
+
+var losses = 0;
+
+var reset = function (){
+    document.getElementById("Wins").innerHTML = wins;
+    document.getElementById("Losses").innerHTML = losses;
+    document.getElementById("Score").innerHTML = total_score;
+}
+
+document.onclick = function(event){
+
+
+}

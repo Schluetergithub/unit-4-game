@@ -26,6 +26,8 @@ var wins = 0;
 
 var losses = 0;
 
+// total_score = game-score;
+
 var button1 = Math.floor(Math.random() * 13);
 console.log(button1)
 
@@ -112,13 +114,13 @@ $("#gem4").on("click", function() {
 
 
 // if - win scenario
-if(total_score === randomNumber) {
+if(game-score === randomNumber) {
     wins++;
     alert("Congratulation! You collected the EXACT value! Let's play again!");
     randomNumber = Math.floor(Math.random() * 50);
 }
 
-if(total_score > randomNumber) {
+if(game-score > randomNumber) {
     losses++;
     alert("Almost! Try again!");
     randomNumber = Math.floor(Math.random() * 50);

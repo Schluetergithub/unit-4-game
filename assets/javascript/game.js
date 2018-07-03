@@ -10,24 +10,26 @@
 
 // Create if statement for a "loss" to reset the game and update the losses column.
 
-// maybe display:none for the gem values.
+
 
 
 $(document).ready(function() {
 
+//create a random goal number between 1-50 
 var randomNumber = Math.floor(Math.random() * 50);
 console.log(randomNumber);
 
-// var gem_value = Math.floor(Math.random() * 20);
 
+// create variables for wins, losses, and total_score
 var total_score = 0;
 
 var wins = 0;
 
 var losses = 0;
 
-// total_score = game-score;
 
+
+// create vaiables for each crystal and assign them a random value 
 var button1 = Math.floor(Math.random() * 13);
 console.log(button1)
 
@@ -43,11 +45,29 @@ console.log(button4)
 
 // var goal = "";
 
+// create a reset function to be called in the case of a win or loss to reset values, random numbers, and the goal
 var reset = function (){
-    document.getElementById("Wins").innerHTML = wins;
-    document.getElementById("Losses").innerHTML = losses;
-    document.getElementById("Score").innerHTML = total_score;
+    total_score = 0;
+    document.getElementById("wins").innerHTML = wins;
+    document.getElementById("losses").innerHTML = losses;
+    document.getElementById("game-score").innerHTML = total_score;
+    randomNumber = Math.floor(Math.random() * 50);
+    $("#goal").html(randomNumber);
+    button1 = Math.floor(Math.random() * 13);
+    button2 = Math.floor(Math.random() * 13);
+    button3 = Math.floor(Math.random() * 13);
+    button4 = Math.floor(Math.random() * 13);
 }
+
+// create an update function to be called in the case of a win or loss to update wins and losses.
+// var update = function (){
+//     if (total_score === randomNumber){
+//         wins++;
+//     }
+//     else if (total_score > randomNumber){
+//         losses++;
+//     }
+// }
 
 // push random number to the empty "goal" span
 
@@ -58,7 +78,6 @@ $("#goal").html(randomNumber);
 
 
 
-// onclick function for gems to be assigned random value
 // add the gem value to total score.
 
 $("#gem1").on("click", function() {
@@ -66,67 +85,64 @@ $("#gem1").on("click", function() {
     total_score += button1;
 
 
-    $("#game-score").html(total_score)
-    // gem_value = Math.floor(Math.random() * 20)
-    // console.log(gem_value)
+    $("#game-score").html(total_score);
+
+    checkCount();
+   
 })
 
 $("#gem2").on("click", function() {
 
     total_score += button2;
 
-    $("#game-score").html(total_score)
-//     gem_value = Math.floor(Math.random() * 20)
+    $("#game-score").html(total_score);
+
+    checkCount();
+
  })
 
 $("#gem3").on("click", function() {
 
     total_score += button3;
 
-    $("#game-score").html(total_score)
-    // gem_value = Math.floor(Math.random() * 20)
+    $("#game-score").html(total_score);
+
+    checkCount();
+   
 })
 
 $("#gem4").on("click", function() {
 
     total_score += button4;
     
-    $("#game-score").html(total_score)
+    $("#game-score").html(total_score);
 
-//     gem_value = Math.floor(Math.random() * 20)
+    checkCount();    
+
  })
 
 
 
 
 
-// onclick function for gem buttons to push to scoreboard
+var checkCount = function() {
+    if (total_score === randomNumber) {
+        // wins++;
+        // update();
+        wins++;
+        alert("Congratulations! You collected the EXACT value! Let's play again!");
+        reset();
+        
+    } else if (total_score > randomNumber) {
+        // losses++;
+        // update();
+        losses++;
+        alert("Almost! Try again!");
+        reset();
 
+    }
+};
 
-// $(".to_scoreboard").on("click", function() {
-
-//     total_score.push(gem_value);
-
-
-//     // $("#gem_value").prepend("<br><hr>" + game_score);
-
-// }
-
-
-// if - win scenario
-if(game-score === randomNumber) {
-    wins++;
-    alert("Congratulation! You collected the EXACT value! Let's play again!");
-    randomNumber = Math.floor(Math.random() * 50);
-}
-
-if(game-score > randomNumber) {
-    losses++;
-    alert("Almost! Try again!");
-    randomNumber = Math.floor(Math.random() * 50);
-}
-
-reset();
 
 
 
